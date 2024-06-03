@@ -1,0 +1,15 @@
+  CRect * rect = [[CRect alloc] init];
+  CPoint *p = [[CPoint alloc] init];
+  if (NO == [self isIntersect:rect1 :rect2])//no isIntersect
+  {
+    [p setXY:minx :miny];
+    [rect setOrigin:p];
+    rect.w = 0;
+    rect.h = 0;
+    return rect;
+  }
+  [p setXY:minx :miny];
+  [rect setOrigin:p];
+  rect.w = ABS(maxx-minx);
+  rect.h = ABS(maxy - miny);
+  return rect; 
