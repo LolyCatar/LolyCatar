@@ -1,0 +1,10 @@
+  return YES;
+}
+-(CRect *) intersectRect:(CRect *)rect1 :(CRect *)rect2
+{
+  int minx = MAX(rect1.origin.x, rect2.origin.x);
+  int miny = MAX(rect1.origin.y, rect2.origin.y);
+  int maxx = MIN(rect1.origin.x+rect1.w, rect2.origin.x+rect2.w);
+  int maxy = MIN(rect1.origin.y+rect1.h, rect2.origin.y+rect2.h); 
+  CRect * rect = [[CRect alloc] init];
+  CPoint *p = [[CPoint alloc] init];
