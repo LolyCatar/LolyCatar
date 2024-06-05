@@ -1,0 +1,10 @@
+private void parseSquareSize (String param)
+{
+   if (param == null) return;
+   try {
+      squareSize = Integer.parseInt (param);
+   }
+   catch (Exception e) {
+     // 保留默认值
+   }
+}
